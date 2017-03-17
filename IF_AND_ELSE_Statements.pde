@@ -1,24 +1,24 @@
-int screenwidth = 800;
-int screenheight = 600;
+int w = 800;
+int h = 600;
 
-
-
+void settings (){
+    size (w,h);
+}
 void setup(){
-  size (800,600);
 }
 void draw(){
   background(0);
   
-  if(mouseX <= (screenwidth / 2) ){
+  if(mouseX <= (w/2) ){
     background(50,150,120);
 
-    if(mouseY >= screenheight / 2 ){
+    if(mouseY >= h/2 ){
      background (255, 0, 0);
   
-  if(mouseY <= screenheight / 2 && mouseX >= screenwidth /2 ){
+  if(mouseY <= h / 2 && mouseX >= w/2 ){
     background (0,255,0);
     
-    if(mouseX >= screenwidth / 2 && mouseY >= screenheight /2){
+    if(mouseX >= w/2 && mouseY >= h/2){
       background (0, 0, 255);
     }
     }
@@ -27,11 +27,9 @@ void draw(){
   
 
 stroke (255);
-line(400, 0, 400, height);
+line(h/2, 0, w/2, height);
 
 stroke (255);
-line(0, 300, width, 300);
+line(0, w/2, width, h/2);
   
 
-
-}
